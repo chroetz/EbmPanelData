@@ -25,7 +25,7 @@ renameIsoYear <- function(data) {
     data |>
     mutate(t = as.double(year)) |> # continuous time t
     mutate(year = as.character(year)) |> # categorical time year
-    rename(i = iso) # short names
+    mutate(i = iso) # short names
   return(data)
 }
 
