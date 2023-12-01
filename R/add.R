@@ -1,6 +1,6 @@
 #' @export
 addLagVariables <- function(data, varNames, lags) {
-  names(lags) <- lags
+  names(lags) <- sprintf("%02d", lags)
   data <-
     data |>
     ungroup() |>
